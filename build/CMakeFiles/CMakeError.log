@@ -1,0 +1,348 @@
+Performing C++ SOURCE FILE Test ICONV_SECOND_ARGUMENT_IS_CONST failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-VkAMVE
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_767ee/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_767ee.dir/build.make CMakeFiles/cmTC_767ee.dir/build
+Building CXX object CMakeFiles/cmTC_767ee.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DICONV_SECOND_ARGUMENT_IS_CONST  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_767ee.dir/src.cxx.o -MF CMakeFiles/cmTC_767ee.dir/src.cxx.o.d -o CMakeFiles/cmTC_767ee.dir/src.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-VkAMVE/src.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-VkAMVE/src.cxx:9:5: error: no matching function for call to 'iconv'
+    iconv(conv, &in, &ilen, &out, &olen);
+    ^~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/iconv.h:75:39: note: candidate function not viable: no known conversion from 'const char **' to 'char **' for 2nd argument
+extern __LIBICONV_DLL_EXPORTED size_t iconv (iconv_t __cd, char* * __restrict __inbuf, size_t * __restrict __inbytesleft, char* * __restrict __outbuf, size_t * __restrict __outbytesleft);
+                                      ^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_767ee.dir/src.cxx.o] Error 1
+make[1]: *** [cmTC_767ee/fast] Error 2
+
+
+Source file was:
+
+  #include <iconv.h>
+  int main(){
+    iconv_t conv = 0;
+    const char* in = 0;
+    size_t ilen = 0;
+    char* out = 0;
+    size_t olen = 0;
+    iconv(conv, &in, &ilen, &out, &olen);
+    return 0;
+  }
+
+
+Performing C++ SOURCE FILE Test HAVE_HASH_MAP failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-XYBNrR
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_6b4dd/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6b4dd.dir/build.make CMakeFiles/cmTC_6b4dd.dir/build
+Building CXX object CMakeFiles/cmTC_6b4dd.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_HASH_MAP -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_6b4dd.dir/src.cxx.o -MF CMakeFiles/cmTC_6b4dd.dir/src.cxx.o.d -o CMakeFiles/cmTC_6b4dd.dir/src.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-XYBNrR/src.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-XYBNrR/src.cxx:1:10: fatal error: 'hash_map' file not found
+#include <hash_map>
+         ^~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_6b4dd.dir/src.cxx.o] Error 1
+make[1]: *** [cmTC_6b4dd/fast] Error 2
+
+
+Source file was:
+#include <hash_map>
+#include <hash_set>
+
+
+int main(int argc, char* argv[]) {
+ 
+    std::hash_map<double*, char*, std::hash<double*>, std::equal_to<double*> > test1;
+    std::hash_set<char*, std::hash<char*>, std::equal_to<char*> > test2;
+return 0; }
+
+Performing C++ SOURCE FILE Test HAVE_TR1_UNORDERED_MAP failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-0W4qyO
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_49476/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_49476.dir/build.make CMakeFiles/cmTC_49476.dir/build
+Building CXX object CMakeFiles/cmTC_49476.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_TR1_UNORDERED_MAP -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_49476.dir/src.cxx.o -MF CMakeFiles/cmTC_49476.dir/src.cxx.o.d -o CMakeFiles/cmTC_49476.dir/src.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-0W4qyO/src.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-0W4qyO/src.cxx:1:10: fatal error: 'tr1/unordered_map' file not found
+#include <tr1/unordered_map>
+         ^~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_49476.dir/src.cxx.o] Error 1
+make[1]: *** [cmTC_49476/fast] Error 2
+
+
+Source file was:
+#include <tr1/unordered_map>
+#include <tr1/unordered_set>
+
+
+int main(int argc, char* argv[]) {
+ 
+    std::tr1::unordered_map<double*, char*> test1;
+    std::tr1::unordered_set<char*> test2;
+return 0; }
+
+Determining if the include file sys/soundcard.h exists failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-S2SVPE
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_cf245/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_cf245.dir/build.make CMakeFiles/cmTC_cf245.dir/build
+Building C object CMakeFiles/cmTC_cf245.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_cf245.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_cf245.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_cf245.dir/CheckIncludeFile.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-S2SVPE/CheckIncludeFile.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-S2SVPE/CheckIncludeFile.c:1:10: fatal error: 'sys/soundcard.h' file not found
+#include <sys/soundcard.h>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_cf245.dir/CheckIncludeFile.c.o] Error 1
+make[1]: *** [cmTC_cf245/fast] Error 2
+
+
+
+Determining if the gethostbyname_r exist failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-AhaREC
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_d9627/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d9627.dir/build.make CMakeFiles/cmTC_d9627.dir/build
+Building C object CMakeFiles/cmTC_d9627.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_d9627.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_d9627.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_d9627.dir/CheckSymbolExists.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-AhaREC/CheckSymbolExists.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-AhaREC/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'gethostbyname_r'
+  return ((int*)(&gethostbyname_r))[argc];
+                  ^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_d9627.dir/CheckSymbolExists.c.o] Error 1
+make[1]: *** [cmTC_d9627/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <netdb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gethostbyname_r
+  return ((int*)(&gethostbyname_r))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Performing C++ SOURCE FILE Test HAVE_ABI_FORCEDUNWIND failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-NWkgQF
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_18c1f/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_18c1f.dir/build.make CMakeFiles/cmTC_18c1f.dir/build
+Building CXX object CMakeFiles/cmTC_18c1f.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -DHAVE_ABI_FORCEDUNWIND  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_18c1f.dir/src.cxx.o -MF CMakeFiles/cmTC_18c1f.dir/src.cxx.o.d -o CMakeFiles/cmTC_18c1f.dir/src.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-NWkgQF/src.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-NWkgQF/src.cxx:5:16: error: no type named '__forced_unwind' in namespace '__cxxabiv1'
+ void foo(abi::__forced_unwind&);
+          ~~~~~^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_18c1f.dir/src.cxx.o] Error 1
+make[1]: *** [cmTC_18c1f/fast] Error 2
+
+
+Source file was:
+#include <cxxabi.h>
+
+
+int main(int argc, char* argv[]) {
+ void foo(abi::__forced_unwind&);
+return 0; }
+
+Performing C++ SOURCE FILE Test wxSIZE_T_IS_NOT_ULONG failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-YFymJM
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_55ced/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_55ced.dir/build.make CMakeFiles/cmTC_55ced.dir/build
+Building CXX object CMakeFiles/cmTC_55ced.dir/src.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxSIZE_T_IS_NOT_ULONG -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_55ced.dir/src.cxx.o -MF CMakeFiles/cmTC_55ced.dir/src.cxx.o.d -o CMakeFiles/cmTC_55ced.dir/src.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-YFymJM/src.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-YFymJM/src.cxx:7:49: error: class member cannot be redeclared
+            struct Foo { void foo(size_t); void foo(unsigned long); };
+                                                ^
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-YFymJM/src.cxx:7:31: note: previous declaration is here
+            struct Foo { void foo(size_t); void foo(unsigned long); };
+                              ^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_55ced.dir/src.cxx.o] Error 1
+make[1]: *** [cmTC_55ced/fast] Error 2
+
+
+Source file was:
+#include <stddef.h>
+
+
+int main(int argc, char* argv[]) {
+ return 0; }
+
+            struct Foo { void foo(size_t); void foo(unsigned long); };
+
+            int bar() {
+return 0; }
+
+Determining if the ftime exist failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-3Ed3QQ
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_869ea/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_869ea.dir/build.make CMakeFiles/cmTC_869ea.dir/build
+Building C object CMakeFiles/cmTC_869ea.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_869ea.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_869ea.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_869ea.dir/CheckSymbolExists.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-3Ed3QQ/CheckSymbolExists.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-3Ed3QQ/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'ftime'
+  return ((int*)(&ftime))[argc];
+                  ^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_869ea.dir/CheckSymbolExists.c.o] Error 1
+make[1]: *** [cmTC_869ea/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef ftime
+  return ((int*)(&ftime))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the putws exist failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-GPRV5D
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_7c053/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7c053.dir/build.make CMakeFiles/cmTC_7c053.dir/build
+Building C object CMakeFiles/cmTC_7c053.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_7c053.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_7c053.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_7c053.dir/CheckSymbolExists.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-GPRV5D/CheckSymbolExists.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-GPRV5D/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'putws'
+  return ((int*)(&putws))[argc];
+                  ^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_7c053.dir/CheckSymbolExists.c.o] Error 1
+make[1]: *** [cmTC_7c053/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef putws
+  return ((int*)(&putws))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the wcsrctombs exist failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-Sj90lC
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_2c285/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2c285.dir/build.make CMakeFiles/cmTC_2c285.dir/build
+Building C object CMakeFiles/cmTC_2c285.dir/CheckSymbolExists.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_2c285.dir/CheckSymbolExists.c.o -MF CMakeFiles/cmTC_2c285.dir/CheckSymbolExists.c.o.d -o CMakeFiles/cmTC_2c285.dir/CheckSymbolExists.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-Sj90lC/CheckSymbolExists.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-Sj90lC/CheckSymbolExists.c:8:19: error: use of undeclared identifier 'wcsrctombs'; did you mean 'wcsrtombs'?
+  return ((int*)(&wcsrctombs))[argc];
+                  ^~~~~~~~~~
+                  wcsrtombs
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/wchar.h:138:8: note: 'wcsrtombs' declared here
+size_t  wcsrtombs(char * __restrict, const wchar_t ** __restrict, size_t,
+        ^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_2c285.dir/CheckSymbolExists.c.o] Error 1
+make[1]: *** [cmTC_2c285/fast] Error 2
+
+
+File CheckSymbolExists.c:
+/* */
+#include <wchar.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef wcsrctombs
+  return ((int*)(&wcsrctombs))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the round exist failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-fE3mWD
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_78ac5/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_78ac5.dir/build.make CMakeFiles/cmTC_78ac5.dir/build
+Building CXX object CMakeFiles/cmTC_78ac5.dir/CheckSymbolExists.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_78ac5.dir/CheckSymbolExists.cxx.o -MF CMakeFiles/cmTC_78ac5.dir/CheckSymbolExists.cxx.o.d -o CMakeFiles/cmTC_78ac5.dir/CheckSymbolExists.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-fE3mWD/CheckSymbolExists.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-fE3mWD/CheckSymbolExists.cxx:8:19: error: address of overloaded function 'round' does not match required type 'int'
+  return ((int*)(&round))[argc];
+                  ^~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h:1663:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY long double round(long double __lcpp_x) _NOEXCEPT
+                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h:1655:46: note: candidate function
+inline _LIBCPP_INLINE_VISIBILITY float       round(float __lcpp_x) _NOEXCEPT
+                                             ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/math.h:476:15: note: candidate function
+extern double round(double);
+              ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/math.h:1675:1: note: candidate template ignored: could not match 'typename std::enable_if<std::is_integral<_A1>::value, double>::type (_A1) noexcept' against 'int'
+round(_A1 __lcpp_x) _NOEXCEPT
+^
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_78ac5.dir/CheckSymbolExists.cxx.o] Error 1
+make[1]: *** [cmTC_78ac5/fast] Error 2
+
+
+File CheckSymbolExists.cxx:
+/* */
+#include <math.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef round
+  return ((int*)(&round))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file tr1/type_traits exists failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-93vguN
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_886f7/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_886f7.dir/build.make CMakeFiles/cmTC_886f7.dir/build
+Building CXX object CMakeFiles/cmTC_886f7.dir/CheckIncludeFile.cxx.o
+/Library/Developer/CommandLineTools/usr/bin/c++ -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -std=gnu++11 -MD -MT CMakeFiles/cmTC_886f7.dir/CheckIncludeFile.cxx.o -MF CMakeFiles/cmTC_886f7.dir/CheckIncludeFile.cxx.o.d -o CMakeFiles/cmTC_886f7.dir/CheckIncludeFile.cxx.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-93vguN/CheckIncludeFile.cxx
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-93vguN/CheckIncludeFile.cxx:1:10: fatal error: 'tr1/type_traits' file not found
+#include <tr1/type_traits>
+         ^~~~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_886f7.dir/CheckIncludeFile.cxx.o] Error 1
+make[1]: *** [cmTC_886f7/fast] Error 2
+
+
+
+Determining if the include file wcstr.h exists failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-5g1GwD
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_9cfd4/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9cfd4.dir/build.make CMakeFiles/cmTC_9cfd4.dir/build
+Building C object CMakeFiles/cmTC_9cfd4.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_9cfd4.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_9cfd4.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_9cfd4.dir/CheckIncludeFile.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-5g1GwD/CheckIncludeFile.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-5g1GwD/CheckIncludeFile.c:1:10: fatal error: 'wcstr.h' file not found
+#include <wcstr.h>
+         ^~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_9cfd4.dir/CheckIncludeFile.c.o] Error 1
+make[1]: *** [cmTC_9cfd4/fast] Error 2
+
+
+
+Determining if the include file sys/inotify.h exists failed with the following output:
+Change Dir: /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-3kClOR
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_77f91/fast && /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_77f91.dir/build.make CMakeFiles/cmTC_77f91.dir/build
+Building C object CMakeFiles/cmTC_77f91.dir/CheckIncludeFile.c.o
+/Library/Developer/CommandLineTools/usr/bin/cc -D__BSD__ -D__DARWIN__ -D__UNIX__ -DwxUSE_UNIX  -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.3.sdk -MD -MT CMakeFiles/cmTC_77f91.dir/CheckIncludeFile.c.o -MF CMakeFiles/cmTC_77f91.dir/CheckIncludeFile.c.o.d -o CMakeFiles/cmTC_77f91.dir/CheckIncludeFile.c.o -c /Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-3kClOR/CheckIncludeFile.c
+/Users/babakhadady/Desktop/RockPaperScissors/build/CMakeFiles/CMakeScratch/TryCompile-3kClOR/CheckIncludeFile.c:1:10: fatal error: 'sys/inotify.h' file not found
+#include <sys/inotify.h>
+         ^~~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/cmTC_77f91.dir/CheckIncludeFile.c.o] Error 1
+make[1]: *** [cmTC_77f91/fast] Error 2
+
+
+
