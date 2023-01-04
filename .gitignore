@@ -2,4 +2,5 @@
 /wxWidgets-3.2.1
 /build
 uninstall.cmake
+CMakeLists.txt 
 /lib
